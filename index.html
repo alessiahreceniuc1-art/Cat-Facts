@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="ro">
 <head>
-  <title>Cat Facts</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Facts</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Cat Facts</h1>
-  <button id="getFactBtn">Obține un fapt despre pisici</button>
-  <p id="factDisplay">Apasă butonul pentru un fapt!</p>
+    <div class="container">
+        <h1>Fapte interesante despre pisici 🐱</h1>
+        
+        <!-- Card pentru afisarea faptului -->
+        <div class="card">
+            <p id="cat-fact">Apasă butonul pentru a genera un fapt despre pisici!</p>
+        </div>
+
+        <!-- Buton pentru refresh -->
+        <button id="new-fact-btn">Generează un nou fapt</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
