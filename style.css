@@ -1,13 +1,53 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container centralizat */
 body {
-  background-color: #f2f2f2;
-  font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card pentru fact */
+.container {
+    text-align: center;
 }
 
 .card {
-  width: 400px;
-  margin: 100px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 350px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
 }
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Buton modern */
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff7f50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #ff6333;
+}
+
+

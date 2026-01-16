@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ro">
+<<<<<<< HEAD
 <head>
   <meta charset="UTF-8">
   <title>Curiozități despre Pisici</title>
@@ -81,8 +82,58 @@
       } catch (error) {
         console.error("Eroare la preluarea curiozității:", error);
         alert("Nu s-a putut încărca curiozitatea. Încearcă din nou!");
+=======
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Facts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fapte interesante despre pisici 🐱</h1>
+        
+        <!-- Card pentru afisarea faptului -->
+        <div class="card">
+            <p id="cat-fact">Apasă butonul pentru a genera un fapt despre pisici!</p>
+        </div>
+
+        <!-- Buton pentru refresh -->
+        <button id="new-fact-btn">Generează un nou fapt</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Curiozitate Pisici</title>
+</head>
+<body>
+  <button id="curiosityBtn">Creat</button>
+  <p id="curiosity"></p>
+
+  <script>
+    document.getElementById("curiosityBtn").addEventListener("click", async () => {
+      try {
+        // Cerere GET la API-ul catfact.ninja
+        const response = await fetch("https://catfact.ninja/fact");
+        const data = await response.json();
+
+        // Afișează curiozitatea în paragraful nostru
+        document.getElementById("curiosity").textContent = data.fact;
+      } catch (error) {
+        document.getElementById("curiosity").textContent = "Oops! Nu am putut lua curiozitatea 😿";
+        console.error(error);
+>>>>>>> ee96dc5b8ec67bda44a7cb1e18c13e457611ea83
       }
     });
   </script>
 </body>
 </html>
+
+
+
+
+
