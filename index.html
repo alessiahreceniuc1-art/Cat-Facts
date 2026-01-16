@@ -32,21 +32,24 @@
   <p id="curiosity"></p>
 
   <script>
-    const curiosities = [
-      "Pisicile dorm în medie 16 ore pe zi.",
-      "Pisicile au 32 de mușchi în fiecare ureche.",
-      "Pisicile pot să alerge cu până la 48 km/h.",
-      "Pisicile nu pot gusta dulce.",
-      "Pisicile folosesc mustățile pentru a simți spațiul din jur."
-    ];
+    document.getElementById("curiosityBtn").addEventListener("click", async () => {
+      try {
+        // Cerere GET la API-ul catfact.ninja
+        const response = await fetch("https://catfact.ninja/fact");
+        const data = await response.json();
 
-    document.getElementById("curiosityBtn").addEventListener("click", () => {
-      const randomIndex = Math.floor(Math.random() * curiosities.length);
-      document.getElementById("curiosity").textContent = curiosities[randomIndex];
+        // Afișează curiozitatea în paragraful nostru
+        document.getElementById("curiosity").textContent = data.fact;
+      } catch (error) {
+        document.getElementById("curiosity").textContent = "Oops! Nu am putut lua curiozitatea 😿";
+        console.error(error);
+      }
     });
   </script>
 </body>
 </html>
+
+
 
 
 
