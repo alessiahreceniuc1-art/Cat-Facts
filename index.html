@@ -22,4 +22,31 @@
     <script src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Curiozitate Pisici</title>
+</head>
+<body>
+  <button id="curiosityBtn">Creat</button>
+  <p id="curiosity"></p>
+
+  <script>
+    const curiosities = [
+      "Pisicile dorm în medie 16 ore pe zi.",
+      "Pisicile au 32 de mușchi în fiecare ureche.",
+      "Pisicile pot să alerge cu până la 48 km/h.",
+      "Pisicile nu pot gusta dulce.",
+      "Pisicile folosesc mustățile pentru a simți spațiul din jur."
+    ];
+
+    document.getElementById("curiosityBtn").addEventListener("click", () => {
+      const randomIndex = Math.floor(Math.random() * curiosities.length);
+      document.getElementById("curiosity").textContent = curiosities[randomIndex];
+    });
+  </script>
+</body>
+</html>
+
+
 
